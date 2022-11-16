@@ -1,7 +1,7 @@
 # PortSwigger
 
-# All learning materials
+## All learning materials
 https://portswigger.net/web-security/all-materials
 
-# All labs
+## All labs
 https://portswigger.net/web-security/all-labs

